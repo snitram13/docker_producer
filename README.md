@@ -5,7 +5,7 @@
   Windows: https://docs.docker.com/desktop/install/windows-install/
 
 ### Clone the project
-  ```git clone url```
+  ```git clone https://github.com/snitram13/docker_producer.git```
  
 ### Start the project with Docker compose
  ```docker-compose up```
