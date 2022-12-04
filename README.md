@@ -13,7 +13,7 @@
 # Step by step how to test my API
 
 > :warning: To test the producer API, the consumer API need to be running!! </br>
-> here's a link to clone the consumer project ```url```
+> here's a link to clone the consumer project ```[url](https://github.com/snitram13/docker_consumer.git)```
 
 ### Make a POST request to http://localhost:8900 with the body below
 ``` 
