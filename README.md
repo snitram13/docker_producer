@@ -12,7 +12,7 @@
  
 # Step by step how to test my API
 
-### Make a POST request to http://locahost:8900 with the body below
+### Make a POST request to http://localhost:8900 with the body below
 ``` 
 {
   "name": "test name",
