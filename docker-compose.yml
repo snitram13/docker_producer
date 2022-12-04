@@ -1,0 +1,31 @@
+version: "3"
+
+services: 
+    rabbitmq:
+      image: rabbitmq:3-management
+      container_name: rabbitmq_management
+      ports: 
+        - 5672:5672 
+        - 15672:15672 
+      environment:
+        - RABBITMQ_DEFAULT_USER=rabbitmq
+        - RABBITMQ_DEFAULT_PASS=rabbitmq
+      restart: always
+      networks:
+        - rabbitmq_network
+    app:
+      build: .
+      container_name: "app"
+      ports: 
+        - 8900:8900
+      volumes:
+        - .:/src/app
+      networks:
+        - rabbitmq_network
+      restart: on-failure
+      depends_on:
+        - rabbitmq
+networks:
+  rabbitmq_network:
+    external: true
+    
